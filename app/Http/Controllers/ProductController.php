@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Session\Store;
-use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\StoreProductRequest;
 
 class ProductController extends Controller
 {
@@ -28,7 +28,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreUserRequest $request)
+    public function store(StoreProductRequest $request)
     {
         Product::create([
             'title' => $request->title,
